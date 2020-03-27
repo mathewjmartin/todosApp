@@ -1,6 +1,6 @@
 <?php
 
-namespace Pokemon\Factories;
+namespace ToDos\Factories;
 
 use Todos\Models\TodoModel;
 use Psr\Container\ContainerInterface;
