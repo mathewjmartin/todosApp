@@ -29,6 +29,10 @@ return function (App $app) {
 
     $container['SeeAllToDosController'] = new ToDos\Factories\SeeAllToDosControllerFactory();
 
+    $container['AddToDoController'] = new ToDos\Factories\AddToDoControllerFactory();
+
     $container['ToDoModel'] = new ToDos\Factories\ToDoModelFactory();
+
+
 
 };
