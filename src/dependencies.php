@@ -20,4 +20,15 @@ return function (App $app) {
         return $logger;
     };
 
+    $container['dbConnection'] = function ($c) {
+        $settings = $c->get('settings')['db'];
+        $db = new \PDO($settings['host'] . $settings['dbName'], $settings['user'], $settings['password']);
+        $db->setAttribute(\PDO::ATTR_DEFAULT_FETCH_MODE, \PDO::FETCH_ASSOC);
+        return $db;
+    };
+
+    $container['SeeAllToDosController'] = new \ToDos\Factories\SeeAllToDosControllerFactory();
+
+    $container['ToDoModel'] = new \ToDos\Factories\ToDoModelFactory();
+
 };
