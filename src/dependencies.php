@@ -22,13 +22,13 @@ return function (App $app) {
 
     $container['dbConnection'] = function ($c) {
         $settings = $c->get('settings')['db'];
-        $db = new \PDO($settings['host'] . $settings['dbName'], $settings['user'], $settings['password']);
+        $db = new PDO($settings['host'] . $settings['dbName'], $settings['userName'], $settings['password']);
         $db->setAttribute(\PDO::ATTR_DEFAULT_FETCH_MODE, \PDO::FETCH_ASSOC);
         return $db;
     };
 
-    $container['SeeAllToDosController'] = new \ToDos\Factories\SeeAllToDosControllerFactory();
+    $container['SeeAllToDosController'] = new ToDos\Factories\SeeAllToDosControllerFactory();
 
-    $container['ToDoModel'] = new \ToDos\Factories\ToDoModelFactory();
+    $container['ToDoModel'] = new ToDos\Factories\ToDoModelFactory();
 
 };

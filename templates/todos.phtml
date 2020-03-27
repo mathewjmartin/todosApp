@@ -1,0 +1,13 @@
+<h1>ToDos</h1>
+
+<?php
+
+//var_dump($ToDos);
+
+$result ='';
+foreach ($ToDos as $todo){
+    $result .= 'Task: ' . $todo['name'] . ' Completed: ' . $todo['completed'] . '<br>';
+}
+echo $result;
+
+?>

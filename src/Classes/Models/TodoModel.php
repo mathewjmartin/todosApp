@@ -1,8 +1,8 @@
 <?php
 
-namespace Pokemon\Models;
+namespace ToDos\Models;
 
-class PokemonModel
+class TodoModel
 {
     private $dbConnection;
 

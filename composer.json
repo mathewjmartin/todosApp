@@ -27,7 +27,7 @@
     },
     "autoload": {
         "psr-4": {
-            "todos\\": "src/classes/"
+            "ToDos\\": "src/classes/"
         }
     },
     "config": {

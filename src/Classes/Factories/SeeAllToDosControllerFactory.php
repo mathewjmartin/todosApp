@@ -2,16 +2,16 @@
 
 namespace ToDos\Factories;
 
-use Pokemon\Controllers\SeeAllTodosController;
+use ToDos\Controllers\SeeAllTodosController;
 use Psr\Container\ContainerInterface;
 
-class SeeAllTodosControllerFactory
+class SeeAllToDosControllerFactory
 {
     public function __invoke(ContainerInterface $container)
     {
         $renderer = $container->get('renderer');
         $toDoModel = $container->get('ToDoModel');
-        return new SeeAllTodosController\($renderer, $toDoModel);
+        return new SeeAllTodosController($renderer, $toDoModel);
         // TODO: Implement __invoke() method.
     }
 }

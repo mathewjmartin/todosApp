@@ -20,7 +20,7 @@ class SeeAllTodosController
 
     public function __invoke($request, $response, $args)
     {
-        $args ['ToDos'] = $this->toDoModel->getAllTodos();
+        $args['ToDos'] = $this->toDoModel->getAllTodos();
 
         return $this->renderer->render($response, 'todos.phtml', $args);
         // TODO: Implement __invoke() method.

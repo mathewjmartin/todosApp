@@ -7,6 +7,6 @@ use Slim\Http\Response;
 return function (App $app) {
     $container = $app->getContainer();
 
-    $app->get('/', 'SeeAllTodosController');
+    $app->get('/todos', 'SeeAllToDosController');
 
 };
